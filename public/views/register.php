@@ -25,7 +25,7 @@ mysqli_select_db($conn, 'conductor')  or die(mysqli_error());
 				<input type="submit" value="Register Account"/>
 </form>
 <h2>Options</h2>
-<a href="/index.php">Return to Main Page</a>
+<a href="/public/views/index.php">Return to Main Page</a>
 
 <?php
 if	($_SERVER['REQUEST_METHOD']	== 'POST')	{

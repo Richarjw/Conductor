@@ -31,7 +31,7 @@ while   ($row = mysqli_fetch_array($posts)) {
 }   
 ?>
 <h3>Options</h3>
-<a href="/index.php">Return to Main Page</a>
+<a href="/public/views/index.php">Return to Main Page</a>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 

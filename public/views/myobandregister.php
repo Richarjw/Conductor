@@ -1,7 +1,7 @@
 <!DOCTYPE	html>
 <?php
-$conn = mysqli_connect('localhost', 'richarjw', 'jjrocks1') or die(mysqli_error()); 
-mysqli_select_db($conn, 'conductor')  or die(mysqli_error()); 
+    $conn = mysqli_connect('localhost', 'richarjw', 'jjrocks1') or die(mysqli_error());
+    mysqli_select_db($conn, 'conductor')  or die(mysqli_error());
 ?>
 <html>
 <head>
@@ -10,15 +10,15 @@ mysqli_select_db($conn, 'conductor')  or die(mysqli_error());
 <body>
 <h1>New	Myoband</h1>
 <form action="" method="post">
-				<label for="myoband">Myoband ID</label><br/>
-				<input type="text" name="myoband"/><br/>
-				<label for="myoname">Myoband Name</label><br/>
-				<input type="text" name="myoname"/><br/>
-				<label for="expected">Expected Number Of Users</label><br/>
-				<input type = "text" name = "expected"/><br/>
-				<label for="sensors">Number Of Sensors</label><br/>
-				<input type = "text" name = "sensors"/><br/>
-				<input type="submit" value="Post"/><br/>
+    <label for="myoband">Myoband ID</label><br/>
+    <input type="text" name="myoband"/><br/>
+    <label for="myoname">Myoband Name</label><br/>
+    <input type="text" name="myoname"/><br/>
+    <label for="expected">Expected Number Of Users</label><br/>
+    <input type = "text" name = "expected"/><br/>
+    <label for="sensors">Number Of Sensors</label><br/>
+    <input type = "text" name = "sensors"/><br/>
+    <input type="submit" value="Post"/><br/>
 </form>
 <h2>Current Myobands</h2>
 <?php
@@ -31,7 +31,7 @@ while   ($row = mysqli_fetch_array($posts)) {
 }   
 ?>
 <h3>Options</h3>
-<a href="/index.php">Return to Main Page</a>
+<a href="/public/views/index.php">Return to Main Page</a>
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
