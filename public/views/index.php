@@ -11,7 +11,7 @@ mysqli_select_db($conn, 'conductor') or die(mysqli_error());
 <h1>Welcome to Conductor!</h1>
 <ul>
     <li><a href="/public/views/register.php/">Create a Conductor Account</a></li>
-    <li><a href="/public/views/post.php">Register an Existing Myoband</a></li>
+    <li><a href="/public/views/myobandregister.php">Register an Existing Myo Band</a></li>
 </ul>
 <h2>Current Users</h2>
 <?php

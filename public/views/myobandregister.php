@@ -10,9 +10,9 @@
 <body>
 <h1>New	Myoband</h1>
 <form action="" method="post">
-    <label for="myoband">Myoband ID</label><br/>
+    <label for="myoband">Myo Band ID</label><br/>
     <input type="text" name="myoband"/><br/>
-    <label for="myoname">Myoband Name</label><br/>
+    <label for="myoname">Myo Band Name</label><br/>
     <input type="text" name="myoname"/><br/>
     <label for="expected">Expected Number Of Users</label><br/>
     <input type = "text" name = "expected"/><br/>
@@ -20,12 +20,12 @@
     <input type = "text" name = "sensors"/><br/>
     <input type="submit" value="Post"/><br/>
 </form>
-<h2>Current Myobands</h2>
+<h2>Current Myo Bands</h2>
 <?php
 
 $posts = mysqli_query($conn,    "SELECT MyoID, MyoName   " . "FROM myoband" . " ORDER  BY  MyoID  DESC " . "LIMIT  30");   
 //  Display each    post
-echo '<p><strong>' . 'Myoband ID' . '-----' . 'Myoband Name' . '</strong></p>';   
+echo '<p><strong>' . 'Myo Band ID' . '-----' . 'Myo Band Name' . '</strong></p>';
 while   ($row = mysqli_fetch_array($posts)) {   
                 echo '<p>' . $row[0] . '-----' . $row[1] .'</p>';   
 }   
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				if (is_null($myo_results)) echo'<ul><li>MyoID already Registered! </li></ul>';
 				else {
 					mysqli_query($conn, "CALL addMyoband(" . $myoband . ", '" . $myoname . "', " . $expected . ", " . $sensors . ")") or exit(1);
-					echo '<ul><li>Registered New Myoband ' . $myoband . '!</li></ul>';
+					echo '<ul><li>Registered New Myo Band ' . $myoband . '!</li></ul>';
 				}
 			}
 

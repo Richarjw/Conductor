@@ -10,7 +10,7 @@ mysqli_select_db($conn, 'conductor')  or die(mysqli_error());
 <body>
 <h1>Register</h1>
 <form action="" method="post">
-				<label for="myoband">Existing Myoband ID </label><br/>
+				<label for="myoband">Existing Myo Band ID </label><br/>
 				<input type="text" name="myoband"/><br/>
 				<label for="firstname">First Name</label><br/>
 				<input type="text" name="firstname"/><br/>
