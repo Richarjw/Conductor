@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Conductor - Register</title>
+<title>Conductor - Login / Sign Up</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
@@ -13,7 +13,6 @@
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-navbar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-handshake-o,.fa-hand-peace-o,.fa-mobile,.fa-globe {font-size:200px}
 </style>
 </head>
 
@@ -26,15 +25,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <a class="w3-padding-large w3-hover-white w3-large w3-indigo" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     </li>
     <li class="w3-hide-small"><a href="index.php" class="w3-padding-large w3-hover-white">Home</a></li>
-    <li><a href="" class="w3-padding-large w3-white">Register Armband</a></li>
-    <li class="w3-hide-small w3-right"><a href="login.php" class="w3-padding-large w3-hover-white">Login / Sign Up</a></li>
+    <li class="w3-hide-small"><a href="register.php" class="w3-padding-large w3-hover-white">Register Armband</a></li>
+    <li class="w3-right"><a href="" class="w3-padding-large w3-white">Login / Sign Up</a></li>
   </ul>
 
   <!-- Navbar on small screens -->
   <div id="nav" class="w3-hide w3-hide-large w3-hide-medium">
     <ul class="w3-navbar w3-left-align w3-large w3-black">
       <li><a class="w3-padding-large" href="index.php">Home</a></li>
-      <li><a class="w3-padding-large" href="login.php">Login / Sign Up</a></li>
+      <li><a class="w3-padding-large" href="register.php">Register Armband</a></li>
     </ul>
   </div>
 </div>
@@ -44,31 +43,57 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <h3>--HIDDEN PADDING--</h3>
 </header>
 
-<!-- REGISTER MYOBAND -->
+<!-- LOGIN -->
 <div class="w3-container w3-indigo w3-center">
-    <h2>Register a New MyoBand</h2>
+    <h2>Login</h2>
 </div>
+
 <div class="w3-row-padding w3-container">
-    <div class="w3-content w3-center"><br />
-    <form class="w3-content" method="post">
-        <label class="w3-left" for="myoband">Myo Band ID</label><br/>
-        <input class="w3-input w3-validate" type="text" name="myoband"/><br/>
-        <label class="w3-left" for="myoname">Myo Band Name</label><br/>
-        <input class="w3-input w3-validate" type="text" name="myoname"/><br/>
-        <label class="w3-left" for="expected">Expected Number Of Users</label><br/>
-        <input class="w3-input w3-validate" type = "text" name = "expected"/><br/>
-        <label class="w3-left" for="sensors">Number Of Sensors</label><br/>
-        <input class="w3-input w3-validate" type = "text" name = "sensors"/><br/>
-        <input class="w3-btn w3-black w3-left" type="submit" value="Register Armband"/><br/>
-    </form>
+    <div class="w3-content w3-center">
+        <br />
+        <form class="w3-content" method="post">
+            <label class="w3-left" for="login_username">Username</label><br/>
+            <input class="w3-input w3-validate" type="text" name="login_username" id="login_username"/><br/>
+            <label class="w3-left" for="login_password">Password</label><br/>
+            <input class="w3-input w3-validate" type="password" name="login_password" id="login_password"/><br/>
+            <input class="w3-btn w3-black w3-left" type="submit" value="Login"/>
+        </form>
+    </div>
+</div>
+<br />
+<br />
+
+<!-- REGISTER -->
+<div class="w3-container w3-indigo w3-center">
+    <h2>Register</h2>
+</div>
+
+<div class="w3-row-padding w3-container w3-light-grey">
+    <div class="w3-content w3-center">
+        <br />
+        <form class="w3-content" method="post">
+            <label class="w3-left" for="myoband">Existing Myo Band ID </label><br/>
+            <input class="w3-input w3-validate w3-light-grey" type="text" name="myoband" id="myoband"/><br/>
+            <label class="w3-left" for="firstname">First Name</label><br/>
+            <input class="w3-input w3-validate w3-light-grey" type="text" name="firstname" id="firstname"/><br/>
+            <label class="w3-left" for="lastname">Last Name</label><br/>
+            <input class="w3-input w3-validate w3-light-grey" type="text" name="lastname" id="lastname"/><br/>
+            <label class="w3-left" for="username">Desired Username</label><br/>
+            <input class="w3-input w3-validate w3-light-grey" type="text" name="username" id="username"/><br/>
+            <label class="w3-left" for="password">Password</label><br/>
+            <input class="w3-input w3-validate w3-light-grey" type="password" name="password" id="password"/><br/>
+            <label class="w3-left" for="confirmpassword">Confirm Password</label><br/>
+            <input class="w3-input w3-validate w3-light-grey" type="password" name="confirmpassword" id="confirmpassword"/><br/>
+            <input class="w3-btn w3-black w3-left" type="submit" value="Register Account"/>
+        </form>
     </div>
     <br /><br /><br /><br />
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h3>Current MyoBands:</h3>
+    <h3>Users Online:</h3>
 
-    <p id="registeredMyoBands"></p>
+    <p id="onlineUsers"></p>
 </div>
 
 <!-- Footer -->
